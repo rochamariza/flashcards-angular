@@ -1,0 +1,23 @@
+<div class="container  min-w-full min-h-full flex flex-col justify-center items-center p-3 gap-5">
+  <h2 class="text-2xl font-bold">FlashCards</h2>
+    <div class="progress-bar flex  flex-row">
+      <div class="fill flex  flex-row justify-between bg-gray-200 ">
+      </div>
+      <p class="current">4</p>
+      <p class="length">3 de {{ flashcards.length }}</p>
+    </div>
+    <div class="card flex flex-col gap-2">
+      <div class="phrase bg-gray-200 flex justify-center items-center">
+          <p class="text-2xl text-center">@if (answer()) {
+            {{ card.answer }}
+          }@else{
+            {{ card.question }}
+          }</p>
+      </div>
+      <div class="buttons flex flex-row justify-between bg-gray-200">
+          <button type="button" (click)="prev(); this.answer.set(false)">< Previous</button>
+          <button type="button" class="answer" (click)="this.answer.set(true)">Show Answer</button>
+          <button type="button" (click)="next(); this.answer.set(false)">Next ></button>
+      </div>
+    </div>
+</div>

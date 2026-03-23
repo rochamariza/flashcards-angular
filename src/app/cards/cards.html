@@ -1,10 +1,10 @@
 <div class="container  min-w-full min-h-full flex flex-col justify-center items-center p-3 gap-5">
   <h2 class="text-2xl font-bold">FlashCards</h2>
     <div class="progress-bar flex  flex-row">
-      <div class="fill flex  flex-row justify-between bg-gray-200 ">
+      <div class="fill flex  flex-row justify-between bg-gray-200 " [style]="{'width': `${currentPercentage}%`}">
       </div>
-      <p class="current">4</p>
-      <p class="length">3 de {{ flashcards.length }}</p>
+      <p class="current">{{ currentPercentage }}%</p>
+      <p class="length">{{ current + 1 }} de {{ flashcards.length }}</p>
     </div>
     <div class="card flex flex-col gap-2">
       <div class="phrase bg-gray-200 flex justify-center items-center">

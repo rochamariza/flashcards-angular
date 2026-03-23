@@ -27,14 +27,13 @@ button{
 }
 .fill{
   padding: 6px 20px;
-  width: 0;
   border-radius: 10px;
   position: relative;
   transition: 0.2s;
 }
 .length{
   position: absolute;
-  right: 35%;
+  right: 174px;
 }
 .current{
   padding-left: 5px;

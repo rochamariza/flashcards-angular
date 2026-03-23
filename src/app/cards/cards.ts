@@ -48,4 +48,9 @@ export class Cards {
     }
   }
   answer = signal(false)
+  get currentPercentage(){
+    return ((this.current + 1) * 100) / this.flashcards.length;
+  }
+
+  protected readonly innerWidth = innerWidth;
 }

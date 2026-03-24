@@ -34,7 +34,6 @@ export class Cards {
   get card(){
     return this.flashcards[this.current]
   }next(){
-    console.log(this.current)
     if(this.current >= this.flashcards.length - 1){
       this.current = this.flashcards.length - 1
     }else{
